@@ -26,10 +26,8 @@ public class Aviao : MonoBehaviour {
     }
 
     private void Update () {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            this.deveImpulsionar = true;
-        }
+        
+        
         this.animacao.SetFloat("VelocidadeY", this.fisica.velocity.y);
 	}
 
@@ -40,6 +38,11 @@ public class Aviao : MonoBehaviour {
             this.Impulsionar();
         }
         
+    }
+
+    public void DarImpulso()
+    {
+        this.deveImpulsionar = true;
     }
 
     public void Reiniciar()
