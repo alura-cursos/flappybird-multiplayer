@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 116158709}
   - component: {fileID: 116158708}
   m_Layer: 0
-  m_Name: aviao1
+  m_Name: aviao 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,6 +531,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forca: 3
+  aoBater:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 890932232}
+        m_MethodName: FinalizarJogo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!50 &116158711
 Rigidbody2D:
   serializedVersion: 4
@@ -607,6 +623,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tecla: 108
+  aoPressionarTecla:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 116158710}
+        m_MethodName: DarImpulso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &163820360
 GameObject:
   m_ObjectHideFlags: 0
@@ -733,6 +765,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forca: 3
+  aoBater:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 890932232}
+        m_MethodName: FinalizarJogo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!95 &163820366
 Animator:
   serializedVersion: 3
@@ -762,6 +810,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tecla: 97
+  aoPressionarTecla:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 163820365}
+        m_MethodName: DarImpulso
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &244135893
 GameObject:
   m_ObjectHideFlags: 0

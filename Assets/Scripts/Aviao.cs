@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Aviao : MonoBehaviour {
     private Rigidbody2D fisica;
     [SerializeField]
     private float forca;
-    private Diretor diretor;
+    [SerializeField]
+    private UnityEvent aoBater;
     private Vector3 posicaoInicial;
     private bool deveImpulsionar;
     private Animator animacao;
@@ -20,10 +22,6 @@ public class Aviao : MonoBehaviour {
         this.animacao = this.GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-        this.diretor = GameObject.FindObjectOfType<Diretor>();
-    }
 
     private void Update () {
         
@@ -61,6 +59,7 @@ public class Aviao : MonoBehaviour {
     private void OnCollisionEnter2D(Collision2D colisao)
     {
         this.fisica.simulated = false;
-        this.diretor.FinalizarJogo();
+        this.aoBater.Invoke();
+        
     }
 }
