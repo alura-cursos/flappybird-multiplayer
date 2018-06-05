@@ -463,9 +463,9 @@ GameObject:
   - component: {fileID: 116158712}
   - component: {fileID: 116158711}
   - component: {fileID: 116158710}
-  - component: {fileID: 116158713}
   - component: {fileID: 116158709}
   - component: {fileID: 116158708}
+  - component: {fileID: 116158713}
   m_Layer: 0
   m_Name: aviao 2
   m_TagString: Untagged
@@ -619,26 +619,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 116158706}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eeec834d6f8c454fb9013858ed05c07, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f64a2a3e589c7842a7ec1be1d8d97c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tecla: 108
-  aoPressionarTecla:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 116158710}
-        m_MethodName: DarImpulso
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &163820360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2002,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 525153878
+  randomSeed: -820682204
   InitialModule:
     serializedVersion: 3
     enabled: 1

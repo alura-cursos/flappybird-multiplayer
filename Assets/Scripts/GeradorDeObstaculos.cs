@@ -23,21 +23,16 @@ public class GeradorDeObstaculos : MonoBehaviour {
         this.controleDeDificuldade = GameObject.FindObjectOfType<ControleDeDificuldade>();
     }
 
-    void Update () {
-       
+    private void Update()
+    {
         this.cronometro -= Time.deltaTime;
-        if(this.cronometro < 0)
+        if (this.cronometro < 0)
         {
-           GameObject.Instantiate(this.manualDeIntrucoes, this.transform.position, Quaternion.identity);
+            GameObject.Instantiate(this.manualDeIntrucoes, this.transform.position, Quaternion.identity);
             this.cronometro = Mathf.Lerp(this.tempoParaGerarFacil,
                                          this.tempoParaGerarDificil,
                                          this.controleDeDificuldade.Dificuldade
                 );
         }
-       
-
-
-
-
     }
 }
