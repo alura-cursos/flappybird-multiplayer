@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ControleDoComputador : MonoBehaviour {
+    [SerializeField]
+    private float intervalo;
     private Aviao aviao;
   
     private void Start () {
@@ -14,7 +16,7 @@ public class ControleDoComputador : MonoBehaviour {
     {
         while (true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(intervalo);
             this.aviao.DarImpulso();
         }
     }
