@@ -480,7 +480,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 116158706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.865816, y: 0.6723416, z: 0.071619235}
+  m_LocalPosition: {x: -5.865816, y: -1.11, z: 0.071619235}
   m_LocalScale: {x: 2.25, y: 2.25, z: 2.25}
   m_Children:
   - {fileID: 1399849108}
@@ -536,6 +536,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 890932232}
         m_MethodName: FinalizarJogo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  aoPassarPeloObstaculo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 660878385}
+        m_MethodName: AdicionarPontos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -754,6 +770,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 890932232}
         m_MethodName: FinalizarJogo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  aoPassarPeloObstaculo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 660878385}
+        m_MethodName: AdicionarPontos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1470,10 +1502,10 @@ RectTransform:
   m_Father: {fileID: 310616513}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.43, y: -3.7}
-  m_SizeDelta: {x: 69.39, y: -283.6}
+  m_AnchorMin: {x: 0, y: 0.47222227}
+  m_AnchorMax: {x: 1, y: 0.5173891}
+  m_AnchoredPosition: {x: -0.43, y: 0.44999695}
+  m_SizeDelta: {x: 69.39, y: -3.2999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &723384569
 MonoBehaviour:

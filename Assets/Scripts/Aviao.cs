@@ -9,6 +9,8 @@ public class Aviao : MonoBehaviour {
     private float forca;
     [SerializeField]
     private UnityEvent aoBater;
+    [SerializeField]
+    private UnityEvent aoPassarPeloObstaculo;
     private Vector3 posicaoInicial;
     private bool deveImpulsionar;
     private Animator animacao;
@@ -62,4 +64,10 @@ public class Aviao : MonoBehaviour {
         this.aoBater.Invoke();
         
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        this.aoPassarPeloObstaculo.Invoke();
+    }
+   
 }
