@@ -12,7 +12,7 @@ public class GeradorDeObstaculos : MonoBehaviour {
     private GameObject manualDeIntrucoes;
     private float cronometro;
     private ControleDeDificuldade controleDeDificuldade;
-
+    private bool parado;
     private void Awake()
     {
         this.cronometro = this.tempoParaGerarFacil;    
@@ -25,6 +25,11 @@ public class GeradorDeObstaculos : MonoBehaviour {
 
     private void Update()
     {
+        if (this.parado)
+        {
+            return;
+        }
+
         this.cronometro -= Time.deltaTime;
         if (this.cronometro < 0)
         {
@@ -34,5 +39,10 @@ public class GeradorDeObstaculos : MonoBehaviour {
                                          this.controleDeDificuldade.Dificuldade
                 );
         }
+    }
+
+    public void Parar()
+    {
+        this.parado = true;
     }
 }
