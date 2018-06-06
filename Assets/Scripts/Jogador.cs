@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jogador : MonoBehaviour {
+public class Jogador : MonoBehaviour
+{
     private Carrossel[] cenario;
     private GeradorDeObstaculos obstaculo;
     private Aviao aviao;
+    private bool estouMorto;
 
     private void Start()
     {
@@ -16,8 +18,9 @@ public class Jogador : MonoBehaviour {
 
     public void Desativar()
     {
+        this.estouMorto = true;
         this.obstaculo.Parar();
-        foreach(var carrossel in this.cenario)
+        foreach (var carrossel in this.cenario)
         {
             carrossel.enabled = false;
         }
@@ -25,11 +28,15 @@ public class Jogador : MonoBehaviour {
 
     public void Ativar()
     {
-        this.aviao.Reiniciar();
-        this.obstaculo.Recomecar();
-        foreach (var carrossel in this.cenario)
+        if (this.estouMorto)
         {
-            carrossel.enabled = true;
+            this.aviao.Reiniciar();
+            this.obstaculo.Recomecar();
+            foreach (var carrossel in this.cenario)
+            {
+                carrossel.enabled = true;
+            }
+            this.estouMorto = false;
         }
     }
 

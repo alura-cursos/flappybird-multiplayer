@@ -33,6 +33,7 @@ public class DiretorMultiplayer : Diretor {
 
     private void ReviverJogadores()
     {
+        this.alguemMorto = false;
         foreach(var jogador in this.jogadores)
         {
             jogador.Ativar();
