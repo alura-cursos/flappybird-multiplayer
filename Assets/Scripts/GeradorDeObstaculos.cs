@@ -45,4 +45,9 @@ public class GeradorDeObstaculos : MonoBehaviour {
     {
         this.parado = true;
     }
+
+    public void Recomecar()
+    {
+        this.parado = false;
+    }
 }

@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class DiretorMultiplayer : Diretor {
 
+    private Jogador[] jogadores;
     private bool alguemMorto;
     private int pontosDesdeAMorte;
+
+    protected override void Start()
+    {
+        base.Start();
+        this.jogadores = GameObject.FindObjectsOfType<Jogador>();
+    }
 
     public void AvisarQueAlguemMorreu()
     {
@@ -17,6 +24,18 @@ public class DiretorMultiplayer : Diretor {
         if (this.alguemMorto)
         {
             this.pontosDesdeAMorte++;
+            if(this.pontosDesdeAMorte >= 2)
+            {
+                this.ReviverJogadores();
+            }
+        }
+    }
+
+    private void ReviverJogadores()
+    {
+        foreach(var jogador in this.jogadores)
+        {
+            jogador.Ativar();
         }
     }
 }

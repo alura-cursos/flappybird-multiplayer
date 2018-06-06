@@ -5,11 +5,13 @@ using UnityEngine;
 public class Jogador : MonoBehaviour {
     private Carrossel[] cenario;
     private GeradorDeObstaculos obstaculo;
+    private Aviao aviao;
 
     private void Start()
     {
         this.cenario = this.GetComponentsInChildren<Carrossel>();
         this.obstaculo = this.GetComponentInChildren<GeradorDeObstaculos>();
+        this.aviao = this.GetComponentInChildren<Aviao>();
     }
 
     public void Desativar()
@@ -18,6 +20,16 @@ public class Jogador : MonoBehaviour {
         foreach(var carrossel in this.cenario)
         {
             carrossel.enabled = false;
+        }
+    }
+
+    public void Ativar()
+    {
+        this.aviao.Reiniciar();
+        this.obstaculo.Recomecar();
+        foreach (var carrossel in this.cenario)
+        {
+            carrossel.enabled = true;
         }
     }
 
