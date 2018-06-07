@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DiretorMultiplayer : Diretor {
-
+    [SerializeField]
+    private int pontosParaReviver;
     private Jogador[] jogadores;
     private bool alguemMorto;
     private int pontosDesdeAMorte;
@@ -20,6 +21,7 @@ public class DiretorMultiplayer : Diretor {
     {
         this.alguemMorto = true;
         this.pontosDesdeAMorte = 0;
+        this.interfaceInativo.AtualizarTexto(this.pontosParaReviver);
         this.interfaceInativo.Mostrar(camera);
     }
     public void ReviverSePrecisar()
@@ -27,7 +29,8 @@ public class DiretorMultiplayer : Diretor {
         if (this.alguemMorto)
         {
             this.pontosDesdeAMorte++;
-            if(this.pontosDesdeAMorte >= 2)
+            this.interfaceInativo.AtualizarTexto(this.pontosParaReviver - this.pontosDesdeAMorte);
+            if(this.pontosDesdeAMorte >= this.pontosParaReviver)
             {
                 this.ReviverJogadores();
             }

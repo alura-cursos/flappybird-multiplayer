@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fundo: {fileID: 1279239610}
+  texto: {fileID: 1844845547}
 --- !u!1 &75492476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,6 +1725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240c855c91fa8ad4a90acc10c4dd6b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pontosParaReviver: 2
 --- !u!4 &890932233
 Transform:
   m_ObjectHideFlags: 0
