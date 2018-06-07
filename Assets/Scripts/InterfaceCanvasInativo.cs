@@ -20,6 +20,11 @@ public class InterfaceCanvasInativo : MonoBehaviour {
         this.fundo.SetActive(true);
         this.canvas.worldCamera = camera;
     }
+
+    public void Sumir()
+    {
+        this.fundo.SetActive(false);
+    }
         
     public void AtualizarTexto(int pontosParaReviver)
     {

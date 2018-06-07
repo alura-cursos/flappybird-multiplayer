@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiretorMultiplayer : Diretor {
+public class DiretorMultiplayer : Diretor
+{
     [SerializeField]
     private int pontosParaReviver;
     private Jogador[] jogadores;
@@ -19,10 +20,24 @@ public class DiretorMultiplayer : Diretor {
 
     public void AvisarQueAlguemMorreu(Camera camera)
     {
-        this.alguemMorto = true;
-        this.pontosDesdeAMorte = 0;
-        this.interfaceInativo.AtualizarTexto(this.pontosParaReviver);
-        this.interfaceInativo.Mostrar(camera);
+        if (this.alguemMorto)
+        {
+            this.interfaceInativo.Sumir();
+            this.FinalizarJogo();
+        }
+        else
+        {
+            this.alguemMorto = true;
+            this.pontosDesdeAMorte = 0;
+            this.interfaceInativo.AtualizarTexto(this.pontosParaReviver);
+            this.interfaceInativo.Mostrar(camera);
+        }
+    }
+
+    public override void ReiniciarJogo()
+    {
+        base.ReiniciarJogo();
+        this.ReviverJogadores();
     }
     public void ReviverSePrecisar()
     {
@@ -30,8 +45,9 @@ public class DiretorMultiplayer : Diretor {
         {
             this.pontosDesdeAMorte++;
             this.interfaceInativo.AtualizarTexto(this.pontosParaReviver - this.pontosDesdeAMorte);
-            if(this.pontosDesdeAMorte >= this.pontosParaReviver)
+            if (this.pontosDesdeAMorte >= this.pontosParaReviver)
             {
+                this.interfaceInativo.Sumir();
                 this.ReviverJogadores();
             }
         }
@@ -40,7 +56,7 @@ public class DiretorMultiplayer : Diretor {
     private void ReviverJogadores()
     {
         this.alguemMorto = false;
-        foreach(var jogador in this.jogadores)
+        foreach (var jogador in this.jogadores)
         {
             jogador.Ativar();
         }
